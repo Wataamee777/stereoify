@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ステレオメーカー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎵 モノラル音声 → ステレオ変換</h1>
+  <input type="file" id="audioInput" accept="audio/*">
+  <button id="convertBtn">ステレオに変換</button>
+  <p id="status"></p>
+  <a id="downloadLink" style="display:none" download="stereo_output.mp3">ダウンロード</a>
+  <script src="libs/ffmpeg.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
