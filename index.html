@@ -2,16 +2,21 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ステレオメーカー</title>
+  <title>左右合成ステレオメーカー</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎵 モノラル音声 → ステレオ変換</h1>
-  <input type="file" id="audioInput" accept="audio/*">
-  <button id="convertBtn">ステレオに変換</button>
+  <h1>🔊 左右の音をステレオ合成！</h1>
+  <p>左チャンネル音声</p>
+  <input type="file" id="leftInput" accept="audio/*">
+  <p>右チャンネル音声</p>
+  <input type="file" id="rightInput" accept="audio/*">
+  <br><br>
+  <button id="mergeBtn">ステレオに合成</button>
   <p id="status"></p>
-  <a id="downloadLink" style="display:none" download="stereo_output.mp3">ダウンロード</a>
-  <script src="libs/ffmpeg.min.js"></script>
+  <a id="downloadLink" style="display:none" download="stereo_output.mp3">🎧 ダウンロード</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@latest"></script>
   <script src="script.js"></script>
 </body>
 </html>
